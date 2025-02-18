@@ -33,3 +33,7 @@ Swahili SMS Filter is a Flask-based application that filters incoming SMS messag
    ```bash
    git clone https://github.com/yourusername/swahili_sms_filter.git
    cd swahili_sms_filter
+
+2. **Create a Virtual Environment:**
+  ```bash
+   python -m venv venv 
