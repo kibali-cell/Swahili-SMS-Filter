@@ -37,8 +37,10 @@ class SMSGatewayFilter:
     def check_spam(self, message):
         features = self.vectorizer.transform([message])
         prediction = self.model.predict(features)[0]
-        confidence = max(self.model.predict_proba(features)[0])
-        return prediction == 0, confidence
+        proba = self.model.predict_proba(features)[0]
+        confidence = float(max(proba))
+        is_spam = bool(prediction == 0)
+        return is_spam, confidence
     
     def process_incoming_message(self, sender, message, recipient):
         is_spam, confidence = self.check_spam(message)
