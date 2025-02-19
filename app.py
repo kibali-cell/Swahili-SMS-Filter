@@ -112,4 +112,4 @@ if __name__ == '__main__':
     print("  - GET  /           (Dashboard)")
     print("  - POST /incoming-messages (SMS Processing)")
     print("  - GET  /test       (Server Status)")
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
