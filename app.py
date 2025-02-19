@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 class SMSGatewayFilter:
     def __init__(self):
-        # Initialize Africa's Talking
+        # Initialize Africa's Talking API
         self.username = os.getenv('AT_USERNAME')
         self.api_key = os.getenv('AT_API_KEY')
         
@@ -106,7 +106,7 @@ def test():
     return jsonify({'status': 'OK', 'message': 'Server is running'}), 200
 
 if __name__ == '__main__':
-    # Print startup message
+    # Startup message
     print("Server starting...")
     print("Available endpoints:")
     print("  - GET  /           (Dashboard)")
